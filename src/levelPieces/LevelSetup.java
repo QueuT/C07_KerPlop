@@ -112,4 +112,8 @@ public int getPlayerStartLoc() {
         return 10; // Initial location of the player
 	 
 	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d0e1ef0d7248f3d3e5cfa2f09e0e160243cd00c9
