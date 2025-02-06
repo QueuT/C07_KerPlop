@@ -67,9 +67,8 @@ public class LevelSetup {
         return interactingPieces;
     }
 	
-
+public int getPlayerStartLoc() {
+        return 10; // Initial location of the player
 	 
-
-	
 	
 }
