@@ -45,43 +45,78 @@ public class LevelSetup {
     //
     
     private void setupLevelPieces1() {
-    	
-    	Drawable background = new Drawable();
-    	
-    	Drawable enemy = new Moveable();
-    	Drawable trap = new Moveable();
-    	
-    	addRandomPiece(background);
-    	
-    	addRandomPiece(enemy);
-    	movingPieces.add(enemy);
-    	
-    	addRandomPiece(trap);
-    	movingPieces.add(trap);
-    	
-    }
-    
-    private void setupLevelPieces2() {
-    	
-    	Drawable background = new Drawable();
-    	
-    	Drawable enemy1 = new Moveable();
-    	Drawable enemy2 = new Moveable();
+        // Drawable-only piece (Does not interact)
+        Drawable portalPad = new PortalPad();  
 
-    	Drawable obstacle = new Moveable();
-    	
-    	addRandomPiece(background);
-    	
-    	addRandomPiece(enemy1);
-    	movingPieces.add(enemy1);
-    	
-    	addRandomPiece(enemy2);
-    	movingPieces.add(enemy2);
-    	
-    	addRandomPiece(obstacle);
-    	movingPieces.add(obstacle);
-    	
+        // Moveable pieces (2 total)
+        Moveable shadowCrawler = new ShadowCrawler();  
+        Moveable rogueBeast = new RogueBeast();      
+
+        // Non-Moveable but Interacting pieces (4 total)
+        GamePiece timeCrystal = new TimeCrystal();    
+        GamePiece ghostArcher = new GhostArcher();    
+        GamePiece mysticGuardian = new MysticGuardian();    
+
+        // Add Drawable piece
+        addRandomPiece(portalPad);
+
+        // Add Moveable pieces
+        addRandomPiece(shadowCrawler);
+        movingPieces.add(shadowCrawler);
+
+        addRandomPiece(rogueBeast);
+        movingPieces.add(rogueBeast);
+
+        // Add Interacting pieces
+        addRandomPiece(timeCrystal);
+        interactingPieces.add(timeCrystal);
+
+        addRandomPiece(ghostArcher);
+        interactingPieces.add(ghostArcher);
+
+        addRandomPiece(mysticGuardian);
+        interactingPieces.add(mysticGuardian);
     }
+
+
+    private void setupLevelPieces2() {
+        // Drawable-only piece
+        Drawable portalPad = new PortalPad();  
+
+        // Moveable pieces
+        Moveable shadowCrawler = new ShadowCrawler();  
+        Moveable rogueBeast = new RogueBeast();      
+
+        // Non-Moveable but Interacting pieces
+        GamePiece timeCrystal1 = new TimeCrystal();    
+        GamePiece timeCrystal2 = new TimeCrystal();    
+        GamePiece ghostArcher = new GhostArcher();    
+        GamePiece mysticGuardian = new MysticGuardian();    
+
+        // Add Drawable piece
+        addRandomPiece(portalPad);
+
+        // Add Moveable pieces
+        addRandomPiece(shadowCrawler);
+        movingPieces.add(shadowCrawler);
+
+        addRandomPiece(rogueBeast);
+        movingPieces.add(rogueBeast);
+
+        // Add Interacting pieces
+        addRandomPiece(timeCrystal1);
+        interactingPieces.add(timeCrystal1);
+
+        addRandomPiece(timeCrystal2);
+        interactingPieces.add(timeCrystal2);
+
+        addRandomPiece(ghostArcher);
+        interactingPieces.add(ghostArcher);
+
+        addRandomPiece(mysticGuardian);
+        interactingPieces.add(mysticGuardian);
+    }
+
     
 
     // Method to add a piece to the board at a random location STILL NOT DONE!!!!!!!!!!!!!!
@@ -108,12 +143,7 @@ public class LevelSetup {
         return interactingPieces;
     }
 	
-public int getPlayerStartLoc() {
+    public int getPlayerStartLoc() {
         return 10; // Initial location of the player
-	 
-	
-<<<<<<< HEAD
+	 }
 }
-=======
-}
->>>>>>> d0e1ef0d7248f3d3e5cfa2f09e0e160243cd00c9
