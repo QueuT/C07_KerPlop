@@ -6,6 +6,7 @@ import java.util.Random;
 import gameEngine.GameEngine;
 import gameEngine.Drawable;
 import gameEngine.Moveable;
+import levelPieces.GamePiece;
 
 
 public class LevelSetup {
@@ -85,6 +86,8 @@ public class LevelSetup {
 
         addRandomPiece(mysticGuardian);
         interactingPieces.add(mysticGuardian);
+        
+        interactingPieces.add((GamePiece) rogueBeast);
     }
 
 
@@ -132,6 +135,8 @@ public class LevelSetup {
 
         addRandomPiece(mysticGuardian);
         interactingPieces.add(mysticGuardian);
+        
+        interactingPieces.add((GamePiece) rogueBeast);
     }
 
     

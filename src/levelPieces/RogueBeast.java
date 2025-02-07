@@ -27,6 +27,7 @@ public class RogueBeast extends GamePiece implements Moveable {
 
     public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
         if (getLocation() == playerLocation) {
+        	System.out.println("Player hit by RogueBeast within range!");
             return InteractionResult.HIT;  // Damages the player when collided
         }
         return InteractionResult.NONE;
