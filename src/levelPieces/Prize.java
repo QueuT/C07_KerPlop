@@ -20,3 +20,4 @@ public class Prize extends GamePiece {
         return InteractionResult.NONE;  // No interaction if player is not on the prize location
     }
 }
+//change
