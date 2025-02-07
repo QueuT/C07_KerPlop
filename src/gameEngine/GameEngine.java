@@ -47,7 +47,13 @@ public class GameEngine {
 	 * 
 	 * @param args Unused
 	 */
-	public static void main(String[] args) {}
+	public static void main(String[] args) {
+		// Create a new GameEngine instance
+	    GameEngine gameEngine = new GameEngine();
+
+	    // Start the game
+	    gameEngine.playGame();
+	}
 
 	/**
 	 * Constructor for GameEngine. It creates a new LevelSetup called levelData
