@@ -2,7 +2,6 @@ package levelPieces;
 
 import gameEngine.Drawable;
 
-
 public class PortalPad implements Drawable {
 
 
