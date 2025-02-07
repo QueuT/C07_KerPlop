@@ -1,35 +1,38 @@
 package levelPieces;
 
-import gameEngine.Drawable;
-import gameEngine.Moveable;
-import gameEngine.InteractionResult;
-
 import java.util.Random;
 
-public class ShadowCrawler implements Moveable {
+import gameEngine.Drawable;
+import gameEngine.GameEngine;
+import gameEngine.InteractionResult;
+import gameEngine.Moveable;
+
+public class ShadowCrawler extends GamePiece implements Moveable {
 	
-	private boolean isVisible; // Tracks the secret super power of invisibility 
-	private Random rand; // Random generator when it's invisible or not
+	private Random rand;
 	
 	//Constructor
 	public ShadowCrawler(int location) {
-		super(location);
+		super('S', "ShadowCrawler", location);
 		this.rand = new Random();
-		this.isVisible = true;
-	}
-	
-	//Move Shadowcrawler left or right randomly
-	@Override
-	public void move() {
-		int direction = rand.nextBoolean() ? 1 : -1;
-		setLocation(getLocation() + direction);
-		
-		is
-	}
-	@Override
-	public void move(Drawable[] gameBoard, int playerLocation) {
-		// TODO Auto-generated method stub
-		
 	}
 
+    @Override
+    public void move(Drawable[] gameBoard, int playerLocation) {
+        int direction = rand.nextInt(2) == 0 ? -1 : 1; // Move left (-1) or right (+1)
+        int newPosition = getLocation() + direction;
+
+        // Ensure it stays within bounds
+        if (newPosition >= 0 && newPosition < GameEngine.BOARD_SIZE) {
+            setLocation(newPosition);
+        }
+    }
+
+    @Override
+    public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
+        if (getLocation() == playerLocation) {
+            return InteractionResult.HIT;  // Hits player if they in the same space
+        }
+        return InteractionResult.NONE;
+    }
 }
