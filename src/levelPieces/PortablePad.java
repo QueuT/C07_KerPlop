@@ -7,7 +7,7 @@ import gameEngine.InteractionResult;
 public class PortalPad extends GamePiece implements Drawable {
 
     public PortalPad(int location) {
-        super('w', "Doormat", location);  // 'w' is the symbol for PortalPad
+        super('w', "PortalPad", location);  // 'w' is the symbol for PortalPad
     }
 
     @Override
