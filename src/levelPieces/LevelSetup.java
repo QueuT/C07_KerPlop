@@ -136,24 +136,34 @@ public class LevelSetup {
 
     
 
-    // Method to add a piece to the board at a random location STILL NOT DONE!!!!!!!!!!!!!!
     private void addRandomPiece(Drawable piece) {
         int position;
         do {
             position = rand.nextInt(GameEngine.BOARD_SIZE); // Pick a random spot
         } while (gameBoard[position] != null); // Ensure it's empty
         
+        // If the piece is a GamePiece, update its location
+        if (piece instanceof GamePiece) {
+            ((GamePiece) piece).setLocation(position);
+        }
+        
         gameBoard[position] = piece; // Place the piece in the board
     }
-    
+
     private void addRandomPieceMoveable(Moveable piece) {
         int position;
         do {
             position = rand.nextInt(GameEngine.BOARD_SIZE); // Pick a random spot
         } while (gameBoard[position] != null); // Ensure it's empty
         
-        gameBoard[position] =  (Drawable) piece; // Place the piece in the board
+        // If the piece is a GamePiece, update its location
+        if (piece instanceof GamePiece) {
+            ((GamePiece) piece).setLocation(position);
+        }
+        
+        gameBoard[position] = (Drawable) piece; // Place the piece in the board
     }
+
 
     
     // Getters for the gameBoard, movingPieces, and interactingPieces this is used in GameEngine our whole goal
