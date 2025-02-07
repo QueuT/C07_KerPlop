@@ -1,5 +1,11 @@
 package levelPieces;
 
+import levelPieces.PortalPad;
+import levelPieces.ShadowCrawler;
+import levelPieces.RogueBeast;
+import levelPieces.TimeCrystal;
+import levelPieces.GhostArcher;
+import levelPieces.MysticGuardian;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -48,23 +54,34 @@ public class LevelSetup {
         // Drawable-only piece (Does not interact)
         Drawable portalPad = new PortalPad();  
 
+        //Random Location Number Generator for parameters
+        Random rand = new Random();
+        
         // Moveable pieces (2 total)
-        Moveable shadowCrawler = new ShadowCrawler();  
-        Moveable rogueBeast = new RogueBeast();      
+        int shadowCrawlerLocation = rand.nextInt(GameEngine.BOARD_SIZE);
+        Moveable shadowCrawler = new ShadowCrawler(shadowCrawlerLocation);
+        
+        int rogueBeastLocation = rand.nextInt(GameEngine.BOARD_SIZE);
+        Moveable rogueBeast = new RogueBeast(rogueBeastLocation);      
 
         // Non-Moveable but Interacting pieces (4 total)
-        GamePiece timeCrystal = new TimeCrystal();    
-        GamePiece ghostArcher = new GhostArcher();    
-        GamePiece mysticGuardian = new MysticGuardian();    
+        int timeCrystalLocation = rand.nextInt(GameEngine.BOARD_SIZE);
+        GamePiece timeCrystal = new TimeCrystal(timeCrystalLocation);    
+        
+        int ghostArcherLocation = rand.nextInt(GameEngine.BOARD_SIZE);
+        GamePiece ghostArcher = new GhostArcher(ghostArcherLocation);    
+        
+        int mysticGuardianLocation = rand.nextInt(GameEngine.BOARD_SIZE);
+        GamePiece mysticGuardian = new MysticGuardian(mysticGuardianLocation);    
 
         // Add Drawable piece
         addRandomPiece(portalPad);
 
         // Add Moveable pieces
-        addRandomPiece(shadowCrawler);
+        addRandomPieceMoveable(shadowCrawler);
         movingPieces.add(shadowCrawler);
 
-        addRandomPiece(rogueBeast);
+        addRandomPieceMoveable(rogueBeast);
         movingPieces.add(rogueBeast);
 
         // Add Interacting pieces
@@ -84,23 +101,31 @@ public class LevelSetup {
         Drawable portalPad = new PortalPad();  
 
         // Moveable pieces
-        Moveable shadowCrawler = new ShadowCrawler();  
-        Moveable rogueBeast = new RogueBeast();      
+        int shadowCrawlerLocation = rand.nextInt(GameEngine.BOARD_SIZE);
+        Moveable shadowCrawler = new ShadowCrawler(shadowCrawlerLocation);
+        
+        int rogueBeastLocation = rand.nextInt(GameEngine.BOARD_SIZE);
+        Moveable rogueBeast = new RogueBeast(rogueBeastLocation);    
 
         // Non-Moveable but Interacting pieces
-        GamePiece timeCrystal1 = new TimeCrystal();    
-        GamePiece timeCrystal2 = new TimeCrystal();    
-        GamePiece ghostArcher = new GhostArcher();    
-        GamePiece mysticGuardian = new MysticGuardian();    
+        int timeCrystalLocation = rand.nextInt(GameEngine.BOARD_SIZE);
+        GamePiece timeCrystal1 = new TimeCrystal(timeCrystalLocation);    
+        GamePiece timeCrystal2 = new TimeCrystal(timeCrystalLocation);    
+        
+        int ghostArcherLocation = rand.nextInt(GameEngine.BOARD_SIZE);
+        GamePiece ghostArcher = new GhostArcher(ghostArcherLocation);    
+        
+        int mysticGuardianLocation = rand.nextInt(GameEngine.BOARD_SIZE);
+        GamePiece mysticGuardian = new MysticGuardian(mysticGuardianLocation);      
 
         // Add Drawable piece
         addRandomPiece(portalPad);
 
         // Add Moveable pieces
-        addRandomPiece(shadowCrawler);
+        addRandomPieceMoveable(shadowCrawler);
         movingPieces.add(shadowCrawler);
 
-        addRandomPiece(rogueBeast);
+        addRandomPieceMoveable(rogueBeast);
         movingPieces.add(rogueBeast);
 
         // Add Interacting pieces
@@ -127,6 +152,15 @@ public class LevelSetup {
         } while (gameBoard[position] != null); // Ensure it's empty
         
         gameBoard[position] = piece; // Place the piece in the board
+    }
+    
+    private void addRandomPieceMoveable(Moveable piece) {
+        int position;
+        do {
+            position = rand.nextInt(GameEngine.BOARD_SIZE); // Pick a random spot
+        } while (gameBoard[position] != null); // Ensure it's empty
+        
+        gameBoard[position] =  (Drawable) piece; // Place the piece in the board
     }
 
     
