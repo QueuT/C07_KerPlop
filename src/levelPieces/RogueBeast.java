@@ -22,6 +22,7 @@ public class RogueBeast extends GamePiece implements Moveable {
 
         if (newLocation >= 0 && newLocation < GameEngine.BOARD_SIZE) {
             setLocation(newLocation);  // Update location
+            
         }
     }
 

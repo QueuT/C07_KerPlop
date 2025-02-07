@@ -87,7 +87,6 @@ public class LevelSetup {
         addRandomPiece(mysticGuardian);
         interactingPieces.add(mysticGuardian);
         
-        interactingPieces.add((GamePiece) rogueBeast);
     }
 
 
@@ -136,7 +135,6 @@ public class LevelSetup {
         addRandomPiece(mysticGuardian);
         interactingPieces.add(mysticGuardian);
         
-        interactingPieces.add((GamePiece) rogueBeast);
     }
 
     
@@ -172,9 +170,49 @@ public class LevelSetup {
 
     
     // Getters for the gameBoard, movingPieces, and interactingPieces this is used in GameEngine our whole goal
+    
+    public void rebuildBoard() {
+        // Create a new board array of the proper size.
+        Drawable[] updatedBoard = new Drawable[GameEngine.BOARD_SIZE];
+        
+        // Place each moveable piece based on its current location.
+        for (Moveable piece : movingPieces) {
+            int pos = ((GamePiece) piece).getLocation();
+            updatedBoard[pos] = (Drawable) piece;
+        }
+        
+        // Place each interacting piece based on its current location.
+        // If the spot is already occupied (for example, by a moveable piece), 
+        // you might choose a rule (here, we only place the interacting piece if the spot is empty).
+        for (GamePiece piece : interactingPieces) {
+            int pos = piece.getLocation();
+            if (updatedBoard[pos] == null) {
+                updatedBoard[pos] = piece;
+            }
+        }
+        
+        // Optionally, if you maintain a list for Drawable-only pieces, place them as well.
+        
+        // Update the internal gameBoard with the new board.
+        this.gameBoard = updatedBoard;
+    }
+    
+    public void updateBoardAfterMove() {
+        rebuildBoard();
+    }
+
     public Drawable[] getBoard() {
+        // Rebuild the board based on the current locations.
+        rebuildBoard();
+        // Return the updated board.
         return gameBoard;
     }
+
+       
+
+        
+        
+    
 
     public ArrayList<Moveable> getMovingPieces() {
         return movingPieces;

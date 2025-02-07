@@ -172,6 +172,9 @@ public class GameEngine {
 		for (Moveable piece : movingPieces) {
 			piece.move(gameBoard, player.getLocation());
 		}
+		 // Rebuild the board
+	    gameBoard = levelData.getBoard();
+	    System.out.println("Board updated after moving pieces.");
 	}
 
 	/**

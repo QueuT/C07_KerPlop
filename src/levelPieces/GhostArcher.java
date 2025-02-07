@@ -24,7 +24,7 @@ public class GhostArcher extends GamePiece {
         // Check if the player is within the attack range of the GhostArcher
         if (Math.abs(playerLocaction - this.getLocation()) <= ATTACK_RANGE) {
             System.out.println("Player hit by GhostArcher within range!");
-            return InteractionResult.HIT; // Player takes damage if within range
+            return InteractionResult.KILL; // Player takes damage if within range
         }
 
         return InteractionResult.NONE; // No interaction if out of range
