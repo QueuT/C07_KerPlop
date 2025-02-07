@@ -22,7 +22,7 @@ public class ShadowCrawler extends GamePiece implements Moveable {
         int direction = rand.nextInt(2) == 0 ? -1 : 1; // Move left (-1) or right (+1)
         int newPosition = getLocation() + direction;
 
-        // Ensure it stays within bounds
+        //  stays within bounds
         if (newPosition >= 0 && newPosition < GameEngine.BOARD_SIZE) {
             setLocation(newPosition);
         }
