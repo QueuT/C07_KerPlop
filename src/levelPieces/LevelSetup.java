@@ -1,19 +1,11 @@
 package levelPieces;
 
-import levelPieces.PortalPad;
-import levelPieces.ShadowCrawler;
-import levelPieces.RogueBeast;
-import levelPieces.TimeCrystal;
-import levelPieces.GhostArcher;
-import levelPieces.MysticGuardian;
 import java.util.ArrayList;
 import java.util.Random;
 
 import gameEngine.GameEngine;
 import gameEngine.Drawable;
 import gameEngine.Moveable;
-
-import levelPieces.GamePiece;
 
 
 public class LevelSetup {
