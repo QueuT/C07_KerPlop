@@ -12,7 +12,7 @@ public class GhostArcher extends GamePiece {
 
     @Override
     public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-        if (this.getLocation() == playerLocation) {
+        if (this.getLocation() == 1) {
             return InteractionResult.KILL; // kill the player
         }
         return InteractionResult.NONE;
