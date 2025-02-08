@@ -26,12 +26,11 @@ public class RogueBeast extends GamePiece implements Moveable {
         int randomMove = (int) (Math.random() * 2); // 0 or 1
         int newLocation = (randomMove == 0) ? this.getLocation() - 1 : this.getLocation() + 1;
         if (newLocation >= 0 && newLocation < GameEngine.BOARD_SIZE) {
-<<<<<<< HEAD
+
             setLocation(newLocation);  // Update location if valid
-=======
+
             setLocation(newLocation);  // Update location
-            
->>>>>>> 4bfd770d2ecb5c147bb5f8326c2ee1129fc727c3
+
         }
     }
 }

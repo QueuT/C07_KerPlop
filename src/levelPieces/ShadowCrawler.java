@@ -29,7 +29,6 @@ public class ShadowCrawler extends GamePiece implements Moveable {
 
          // Check if the new position is already occupied
          if (gameBoard[newPosition] != null) {
-             System.out.println("ShadowCrawler attempted to move to an occupied position.");
          } else {
              // Clear the old position
              gameBoard[currentLocation] = null;
@@ -39,20 +38,15 @@ public class ShadowCrawler extends GamePiece implements Moveable {
 
              // Place the ShadowCrawler at the new position on the board
              gameBoard[newPosition] = this;
-             System.out.println("Calling interact method...");
              InteractionResult reaction = interact(gameBoard, playerLocation);
          }
      } else {
          // If the new position is out of bounds, do not move
-         System.out.println("ShadowCrawler attempted to move out of bounds.");
       }
     }
     
     @Override
     public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-    	System.out.println("Checking interaction...");
-        System.out.println("ShadowCrawler Location: " + this.getLocation());
-        System.out.println("Player Location: " + playerLocation);
     	if (this.getLocation() == playerLocation) {
             return InteractionResult.HIT;
         }

@@ -12,9 +12,8 @@ public class TimeCrystal extends GamePiece {
 	
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-	     System.out.println("This is TimeCrystal piece: " + getLocation());
 		 if (getLocation() == playerLocation) {
-	            return InteractionResult.ADVANCE;  // Damages the player when collided
+	            return InteractionResult.ADVANCE;  // Granting the player for next level when collided
 	        }
 	        return InteractionResult.NONE;
 	        }

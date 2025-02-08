@@ -87,11 +87,10 @@ public class LevelSetup {
         addRandomPiece(mysticGuardian);
         interactingPieces.add(mysticGuardian);
         
-<<<<<<< HEAD
+
         interactingPieces.add((GamePiece) rogueBeast);
         interactingPieces.add((GamePiece) shadowCrawler);
-=======
->>>>>>> 4bfd770d2ecb5c147bb5f8326c2ee1129fc727c3
+
     }
 
 
@@ -140,11 +139,9 @@ public class LevelSetup {
         addRandomPiece(mysticGuardian);
         interactingPieces.add(mysticGuardian);
         
-<<<<<<< HEAD
         interactingPieces.add((GamePiece) rogueBeast);
         interactingPieces.add((GamePiece) shadowCrawler);
-=======
->>>>>>> 4bfd770d2ecb5c147bb5f8326c2ee1129fc727c3
+
     }
 
     
