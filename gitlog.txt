@@ -1,0 +1,260 @@
+commit c5ce0a9212ee2ba746e004312656a2ad78c472c3
+Merge: 1746201 4b5832e
+Author: Francez Fernandez <francez_fernandez@mines.edu>
+Date:   Sat Feb 8 08:48:53 2025 -0700
+
+    Merge branch 'master' of https://github.com/QueuT/C07_KerPlop
+
+commit 17462013faf3b49f3bfe2ca18654b646c677b0ed
+Author: Francez Fernandez <francez_fernandez@mines.edu>
+Date:   Sat Feb 8 08:48:28 2025 -0700
+
+    Fernandez, removing all the debug print line.
+
+commit 4b5832e9ad120018e8bf8897bdccc5640aeb2738
+Author: Francez18 <francez_fernandez@mines.edu>
+Date:   Sat Feb 8 07:55:17 2025 -0700
+
+    Fernandez, adding the readme.txt and the UML diagram.
+
+commit bc70e373419545073592f6c7d99602ae406b5df4
+Merge: e9c34f3 4bfd770
+Author: Francez Fernandez <francez_fernandez@mines.edu>
+Date:   Sat Feb 8 07:47:07 2025 -0700
+
+    Fernandez, I made the shadowCrawler interact with the player and it should be working this time.
+
+commit e9c34f334fc92dbde1001222fd7f78ff02896bdc
+Author: Francez Fernandez <francez_fernandez@mines.edu>
+Date:   Sat Feb 8 07:45:40 2025 -0700
+
+    Fernandez, I made the shadowCrawler interact with the player and it should be working this time.
+
+commit 4bfd770d2ecb5c147bb5f8326c2ee1129fc727c3
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Fri Feb 7 14:57:17 2025 -0700
+
+    I have made it so that are moveable can finally move now! But now i'm having troubles with moveables occupying the same space as other pieces and the INteractinoResult in ShadowCrawler. It's noticing but not dooing hit
+
+commit 71d51aec3fe83f710b2029e99c672b6099a6aa4f
+Author: Francez Fernandez <francez_fernandez@mines.edu>
+Date:   Fri Feb 7 01:27:42 2025 -0700
+
+    Fernandez, Debug
+
+commit bfb91a2267f6ed5e80b5743d323cc0f4d1cd0994
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Fri Feb 7 01:09:16 2025 -0700
+
+    There is currently errors with the board and getLocation of the pieces. Our movables aren't moving
+
+commit 05c354e6d558a4532713382055e459723562ccb9
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Thu Feb 6 23:42:56 2025 -0700
+
+    Quincy, I have aided implementation in main so that I could actually run it in my eclipse console.
+
+commit d2b8186b89ae5c813f9196b99a67883c056bc598
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Thu Feb 6 23:32:43 2025 -0700
+
+    LevelSetup QUincy, I have added methods to addRandomPieces of movable and draw type. I created a random assignment for each
+
+commit a9cca3b53edeb53fc98d2048825aa0be636c4d0d
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Thu Feb 6 23:32:34 2025 -0700
+
+    LevelSetup QUincy, I have added methods to addRandomPieces of movable and draw type. I created a random assignment for each
+
+commit c9a0ecf500f1b0c98000e57977634b23e00acdbf
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Thu Feb 6 23:08:34 2025 -0700
+
+    Quincy, I created the TimeCrystal class.
+
+commit 2deedcead7ee405d950b4083e362785d45e9e6c7
+Merge: 3859f49 335f49b
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Thu Feb 6 22:57:15 2025 -0700
+
+    Merge branch 'master' of https://github.com/QueuT/C07_KerPlop
+    Merging at 2/6/2025 10:57pm
+
+commit 3859f49d18ddd17d980fbe4f97354c6c63e183b8
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Thu Feb 6 22:56:46 2025 -0700
+
+    Quincy, I finished ShadowCrawler and it moves left and right and if they occupy the same situation then player will get HIT
+
+commit 335f49bf2706feca447c466320034ffbc63b7778
+Author: Francez Fernandez <francez_fernandez@mines.edu>
+Date:   Thu Feb 6 22:04:41 2025 -0700
+
+    Fernandez, created RogueBeast class that extends GamePiece and implements Moveable.
+
+commit 2cc3b59f12694e0ec58182509b910bab431c46b4
+Author: Francez Fernandez <francez_fernandez@mines.edu>
+Date:   Thu Feb 6 21:53:31 2025 -0700
+
+    Fernandez, removing the Enemy class and update the GhostArcher to kill the player at the range of 1.
+
+commit b9257d5c1a469d146b900e93485ba734dd96719a
+Merge: a533a70 de00daf
+Author: Francez Fernandez <francez_fernandez@mines.edu>
+Date:   Thu Feb 6 21:16:22 2025 -0700
+
+    Merge branch 'master' of https://github.com/QueuT/C07_KerPlop
+
+commit a533a700b0a90a4975dd955f7628a6a0d0601048
+Author: Francez Fernandez <francez_fernandez@mines.edu>
+Date:   Thu Feb 6 21:15:54 2025 -0700
+
+    Fernandez, update the Prize class to MysticGuardian class that extends GamePiece, not movable and grant some points.
+
+commit de00daf2ec3f49cb8af4f93c17ba44adee6c9dd8
+Merge: 501a028 70637af
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Thu Feb 6 21:11:32 2025 -0700
+
+    Updating
+
+commit 501a028f7d0dc15d06670a07cdec30270c198866
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Thu Feb 6 21:10:58 2025 -0700
+
+    Updating
+
+commit 70637afc85c567b1822f4e0f8817f6fa11100bda
+Author: Francez Fernandez <francez_fernandez@mines.edu>
+Date:   Thu Feb 6 21:07:01 2025 -0700
+
+    Fernandez, update the PortalPad class
+
+commit 51a73102b55882d06490cf7d7622e6601afa0fda
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Thu Feb 6 21:00:03 2025 -0700
+
+    Changed PortalPad to only be Drawable not extending game piece.
+
+commit 569b2180c42d60cca7b2bc476eaeaf6beec20044
+Merge: e20adad 0756a36
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Thu Feb 6 20:46:45 2025 -0700
+
+    Merge branch 'master' of https://github.com/QueuT/C07_KerPlop
+    
+    Francez and I are putting our work together.
+
+commit e20adada6fb3e62558a41cb3519659ffafdea382
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Thu Feb 6 20:46:19 2025 -0700
+
+    Quincy,  I added the soon to be implentations of our different classes. I am currently working on ShadowCrawler RNG invisibility.
+
+commit 0756a361cb37dbfa229ff0e6c1e667b713e28772
+Author: Francez Fernandez <francez_fernandez@mines.edu>
+Date:   Thu Feb 6 20:44:41 2025 -0700
+
+    Fernandez, update the PortalPad class
+
+commit ca8f4b185ce8c8427ccf7160094cdc778c519ede
+Author: Francez Fernandez <francez_fernandez@mines.edu>
+Date:   Thu Feb 6 20:35:41 2025 -0700
+
+    Fernandez, added GhostArcher class that implements and extends GamePiece with interaction to kill player if they are on the same space.
+
+commit 74c64cea5171288c19113fc42667252726c5f5e1
+Author: Francez Fernandez <francez_fernandez@mines.edu>
+Date:   Thu Feb 6 19:13:06 2025 -0700
+
+    Fernandez, added PortablePad as a non-iteracting Drawable piece.
+
+commit 2931a39a44867da318fa583ead73772e39427749
+Author: Francez Fernandez <francez_fernandez@mines.edu>
+Date:   Thu Feb 6 19:11:28 2025 -0700
+
+    Fernandez, added PortablePad as a non-iteracting Drawable piece.
+
+commit 144651e03da483b25cf3fa26fa4a73160012d1dd
+Author: Francez Fernandez <francez_fernandez@mines.edu>
+Date:   Thu Feb 6 17:25:14 2025 -0700
+
+    Fernandez, created an Enemy class that extends GamePiece with InteractionResult HIT/NONE
+
+commit 9544acac17b72d42efd188b472a975ddb444b184
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Thu Feb 6 17:08:47 2025 -0700
+
+    Added enemy class
+
+commit 5ddfb1161c88609677f5ade43cad11adef443482
+Author: Francez Fernandez <francez_fernandez@mines.edu>
+Date:   Thu Feb 6 17:00:24 2025 -0700
+
+    Testing 2
+
+commit 24c58055e2f056ef9bd068b8df37d8bb33649bcb
+Merge: aa62ae2 d0e1ef0
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Thu Feb 6 16:51:29 2025 -0700
+
+    Fixing GIT
+
+commit aa62ae2615f20b9c5434f438ae49d7a900e3bb3b
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Thu Feb 6 16:37:00 2025 -0700
+
+    Added the SetupLevel method for two different levels. Working on making git remote work.
+
+commit d0e1ef0d7248f3d3e5cfa2f09e0e160243cd00c9
+Merge: 68ce6fb e239344
+Author: QueuT <163066276+QueuT@users.noreply.github.com>
+Date:   Thu Feb 6 16:00:42 2025 -0700
+
+    Merge pull request #1 from QueuT/main
+    
+    Main
+
+commit e2393443f196bacab246801509bffcc97293118c
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Thu Feb 6 15:41:38 2025 -0700
+
+    Quincy, updated levelStage by implementing the two different cases for
+    levels that will select different pieces for the board.
+
+commit 4e58a3fc5d9c0bfa4d6aa1795d6e3dfec5e4dc69
+Merge: ece017d 68ce6fb
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Thu Feb 6 14:46:22 2025 -0700
+
+    Merge branch 'master' of https://github.com/QueuT/C07_KerPlop.git into main
+
+commit 68ce6fb7dddd492b8bb5ef96aed5c1137e5175e6
+Author: Francez18 <francez_fernandez@mines.edu>
+Date:   Thu Feb 6 12:56:27 2025 -0700
+
+    Fernandez, update LevelSetup.java put the starting location of the player.
+
+commit 5640f3adb4fff5dc46ee746470bfd253c1b1ce67
+Author: Francez18 <francez_fernandez@mines.edu>
+Date:   Thu Feb 6 12:22:44 2025 -0700
+
+    Fernandez, I started to create the Prize class for the prize of the game.
+
+commit 6545c6c16868d5d8229209e117568e24af25c758
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Wed Feb 5 18:39:34 2025 -0700
+
+    Quincy, I started the LevelSetup.java class. I added the instance variables that we will need for GameEngine package. CODE IS NOT RUNNING YET. Still need to complete the RNG piece allocaion on the 1D game board.
+
+commit ce8c22efca6f3adbaa3a3751ae5a73d853990a9e
+Author: Quincy Breaux <quincy_breaux@mines.edu>
+Date:   Tue Feb 4 13:40:39 2025 -0700
+
+    Initial commit with starter code
+
+commit ece017daf88e779ee367495f63fec8b8224b1af8
+Author: QueuT <163066276+QueuT@users.noreply.github.com>
+Date:   Tue Feb 4 13:26:31 2025 -0700
+
+    Initial commit
