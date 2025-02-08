@@ -5,31 +5,28 @@ import gameEngine.GameEngine;
 import gameEngine.InteractionResult;
 import gameEngine.Moveable;
 
-import java.util.Random;
-
 public class RogueBeast extends GamePiece implements Moveable {
-    private Random random;
-    
-	public RogueBeast(int location) {
-        super('R', "RogueBeast", location);
-        this.random = new Random();
-	}
+
+    public RogueBeast(int location) {
+        super(location);  // Call the GamePiece constructor
+    }
+
+    @Override
+    public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
+        // Check if the RogueBeast's location matches the player's location
+        if (this.getLocation() == playerLocation) {
+            return InteractionResult.HIT;  // Player gets hit by the RogueBeast
+        }
+        return InteractionResult.NONE;  // No interaction if locations don't match
+    }
 
     @Override
     public void move(Drawable[] gameBoard, int playerLocation) {
-        int randomMove = random.nextInt(2);
-        int newLocation = (randomMove == 0) ? getLocation() - 1 : getLocation() + 1;
-
+        // Example of random movement: move left or right randomly
+        int randomMove = (int) (Math.random() * 2); // 0 or 1
+        int newLocation = (randomMove == 0) ? this.getLocation() - 1 : this.getLocation() + 1;
         if (newLocation >= 0 && newLocation < GameEngine.BOARD_SIZE) {
-            setLocation(newLocation);  // Update location
+            setLocation(newLocation);  // Update location if valid
         }
-    }
-
-    public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-        if (getLocation() == playerLocation) {
-        	System.out.println("Player hit by RogueBeast within range!");
-            return InteractionResult.HIT;  // Damages the player when collided
-        }
-        return InteractionResult.NONE;
     }
 }
