@@ -8,7 +8,7 @@ import gameEngine.Moveable;
 public class RogueBeast extends GamePiece implements Moveable {
 
     public RogueBeast(int location) {
-        super(location);  // Call the GamePiece constructor
+        super('R', "RougeBeast", location);  // Call the GamePiece constructor
     }
 
     @Override
@@ -28,8 +28,6 @@ public class RogueBeast extends GamePiece implements Moveable {
         if (newLocation >= 0 && newLocation < GameEngine.BOARD_SIZE) {
 
             setLocation(newLocation);  // Update location if valid
-
-            setLocation(newLocation);  // Update location
 
         }
     }

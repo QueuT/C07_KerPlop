@@ -38,12 +38,6 @@ public class ShadowCrawler extends GamePiece implements Moveable {
 
              // Place the ShadowCrawler at the new position on the board
              gameBoard[newPosition] = this;
-<<<<<<< HEAD
-            // System.out.println("Calling interact method...");
-             //System.out.println("ShadowCrawler Location: " + this.getLocation());
-             //System.out.println("Player Location: " + playerLocation);
-=======
->>>>>>> 42471f357fb621d11c6a44e1e06d5ca5221d9d2f
              InteractionResult reaction = interact(gameBoard, playerLocation);
          }
      } else {
