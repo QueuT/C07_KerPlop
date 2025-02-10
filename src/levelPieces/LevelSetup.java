@@ -87,6 +87,10 @@ public class LevelSetup {
         addRandomPiece(mysticGuardian);
         interactingPieces.add(mysticGuardian);
         
+
+        interactingPieces.add((GamePiece) rogueBeast);
+        interactingPieces.add((GamePiece) shadowCrawler);
+
     }
 
 
@@ -135,6 +139,9 @@ public class LevelSetup {
         addRandomPiece(mysticGuardian);
         interactingPieces.add(mysticGuardian);
         
+        interactingPieces.add((GamePiece) rogueBeast);
+        interactingPieces.add((GamePiece) shadowCrawler);
+
     }
 
     
