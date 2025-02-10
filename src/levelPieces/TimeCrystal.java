@@ -13,8 +13,8 @@ public class TimeCrystal extends GamePiece {
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
 	     System.out.println("This is TimeCrystal piece: " + getLocation());
-		 if (getLocation() == playerLocation) {
-	            return InteractionResult.ADVANCE;  // Damages the player when collided
+		 if (this.getLocation() == playerLocation) {
+	            return InteractionResult.ADVANCE;  
 	        }
 	        return InteractionResult.NONE;
 	        }
