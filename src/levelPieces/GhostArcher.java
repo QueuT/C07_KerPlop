@@ -11,11 +11,11 @@ public class GhostArcher extends GamePiece {
         super('G', "GhostArcher", location);  // 'M' is the symbol for MysticGuardian
     }
     
-    @Override
-    public void draw() {
+    //@Override
+    //public void draw() {
         // Print 'G' for GhostArcher
-        System.out.print("G");
-    }
+    //    System.out.print("G");
+    //}
     
     @Override
     public InteractionResult interact(Drawable[] board, int playerLocaction) {
