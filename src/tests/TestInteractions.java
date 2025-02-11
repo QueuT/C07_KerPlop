@@ -4,6 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import gameEngine.Drawable;
 import levelPieces.GhostArcher;
+import levelPieces.MysticGuardian;
+import levelPieces.PortalPad;
+import levelPieces.RogueBeast;
+import levelPieces.TimeCrystal;
 import gameEngine.GameEngine;
 import gameEngine.InteractionResult;
 
@@ -24,7 +28,7 @@ public class TestInteractions {
         result = archer.interact(gameBoard, 7);
         assertEquals(InteractionResult.NONE, result, "GhostArcher should not interact with the player when out of range");
     }
-}
+    
 
     @Test
     public void testMysticGuardianInteraction() {
