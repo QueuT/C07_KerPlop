@@ -3,6 +3,7 @@ package tests;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import gameEngine.Drawable;
+import levelPieces.RogueBeast;
 import levelPieces.ShadowCrawler;
 import gameEngine.GameEngine;
 
@@ -23,6 +24,22 @@ public class TestMovingPieces {
             // Ensure it moves but stays within bounds
             assertNotEquals(prevLoc, newLoc, "ShadowCrawler should move");
             assertTrue(newLoc >= 0 && newLoc < GameEngine.BOARD_SIZE, "ShadowCrawler moved out of bounds");
+        }
+    }
+    
+    @Test
+    public void testRogueBeastMovement() {
+        Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
+        RogueBeast beast = new RogueBeast(3);
+        gameBoard[3] = beast;
+
+        for (int i = 0; i < 100; i++) {
+            int prevLoc = beast.getLocation();
+            beast.move(gameBoard, 12);
+            int newLoc = beast.getLocation();
+
+            assertNotEquals(prevLoc, newLoc, "RogueBeast should move");
+            assertTrue(newLoc >= 0 && newLoc < GameEngine.BOARD_SIZE, "Out of bounds");
         }
     }
 }
