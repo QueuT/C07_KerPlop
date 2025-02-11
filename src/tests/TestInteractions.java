@@ -17,7 +17,7 @@ public class TestInteractions {
         gameBoard[8] = archer;
 
         // Test if GhostArcher interacts with player at distance
-        assertEquals(InteractionResult.HIT, archer.interact(gameBoard, 10), "GhostArcher should hit the player at position 10");
+        assertEquals(InteractionResult.KILL, archer.interact(gameBoard, 10), "GhostArcher should hit the player at position 10");
 
         // Test if GhostArcher does NOT interact with player at far distance
         assertEquals(InteractionResult.NONE, archer.interact(gameBoard, 18), "GhostArcher should not hit the player at position 18");
