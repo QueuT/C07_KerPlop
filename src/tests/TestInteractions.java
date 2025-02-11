@@ -14,7 +14,7 @@ public class TestInteractions {
     public void testGhostArcherInteraction() {
         Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
         GhostArcher archer = new GhostArcher(5);
-        gameBoard[8] = ghostArcher;
+        gameBoard[8] = archer;
 
         // Test if GhostArcher interacts with player at distance
         int playerLocation = 6; // Within range of the GhostArcher (attack range is 1)
